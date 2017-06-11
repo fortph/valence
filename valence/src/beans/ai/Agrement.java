@@ -4,7 +4,7 @@ import java.util.Date;
 
 import beans.identite.Identite;
 /**
- * 
+ * classe agrément
  * @author phil
  *
  */
