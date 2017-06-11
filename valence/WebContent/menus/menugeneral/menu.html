@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css"
+	href="/valence/javascript/css/ui-lightness/minified/jquery-ui.min.css" />
+<script type="text/javascript"
+	src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="/valence/javascript/jquery-2.0.3.min.js"><\/script>')
+</script>
+
+<script type="text/javascript"
+	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="/valence/javascript/jquery-ui-1.10.3.custom.js"><\/script>')
+</script>
+
+
+
+
+
+<script type="text/javascript">
+	$(function() {
+		var nav = $('#main-menu-container').offset().top;
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > (nav - 50)) {
+				$('#main-menu-container').addClass("f-nav");
+			} else {
+				$('#main-menu-container').removeClass("f-nav");
+			}
+		});
+		$("#menu").menu({
+			position : {
+				my : "left top",
+				at : "left top+25"
+			}
+		});
+
+	});
+</script>
+
+<style>
+.f-nav { /* To fix main menu container */
+	z-index: 9999;
+	position: fixed;
+	tex-align: center;
+	top: 0;
+	width: 78%;
+}
+
+.ui-menu {
+	width: 15%;
+	font-size: 90%;
+	font-weight: bold;
+	min-height: 25px;
+}
+
+ul#menu {
+	width: 100%;
+	background: #888;
+}
+
+ul#menu>li {
+	margin: auto;
+	/*largeur divise par le nombre de menus principaux soit 100/4= 25 %  */
+	width: 10%;
+	padding: 0;
+	background: #888;
+	float: left;
+}
+
+ul#menu>li>ul {
+	margin: auto;
+	width: 15%;
+	padding: 0;
+	background: #888;
+	float: left;
+	list-style-type: none;
+}
+
+/*.niv3{
+	width: 100%;
+	margin: 20%;
+	background: #888;
+	float: left;
+	list-style-type: none;
+}*/
+ul#menu>li>ul>li>ul { /*position:relative;*/
+	position: relative;
+	width: 100%;
+	padding-left: 25%;
+	background: #a5a0a0;
+}
+</style>
+
+</head>
+
+<body>
+	<div id="main-menu-container">
+		<ul id="menu">
+			<!-- 
+		<li><a href="/valence/jsp/accueil/rechercherPersonne.jsp">Accueil
+		</a>
+		
+		</li>
+-->
+			<li><a href="#">Accueil</a>
+				<ul>
+					<li><a href="/valence/jsp/accueil/rechercherPersonne.jsp">Rechercher
+							Personne</a></li>
+					<li><a
+						href="/valence/jsp/recherche/accueil/rechercheIdentite.jsp">Rechercher
+							par critères</a></li>
+					<li><a
+						href="/valence/jsp/recherche/accueil/rechercheIdentitepourcent.jsp">Statistiques</a></li>
+					<!-- 
+					<ul class="niv3">
+
+						<li><a
+							href="/valence/jsp/recherche/accueil/rechercheIdentitepourcent.jsp">
+
+								%</a></li>
+
+						<li><a
+							href="/valence/jsp/recherche/accueil/rechercheIdentite.jsp">
+
+								critères</a></li>
+
+					</ul></li>
+					-->
+				</ul>
+			<li><a href="#">Pyramide</a>
+
+				<ul>
+
+					<li><a
+						href="/valence/jsp/formation/rechercherPersonneFormation.jsp">Enregistrement</a>
+					</li>
+					<li><a
+						href="/valence/jsp/formation/rechercherPersonneFormation.jsp">Inscription</a>
+					</li>
+					<li><a href="/valence/jsp/formation/listeFormations.jsp">Liste
+							des formations</a></li>
+					<li><a
+						href="/valence/jsp/formation/creernouvelleformation.jsp">Nouvelle
+							formation</a></li>
+					<li><a
+						href="/valence/jsp/formation/listeOrganismeFormation.jsp">Liste
+							organismes formation</a></li>
+					<li><a
+						href="/valence/jsp/formation/listeenregistresparformation.jsp">Liste
+							Enregistrés</a></li>
+					<li><a
+						href="/valence/jsp/formation/listeinscritsparformation.jsp">Liste
+							Inscrits (Abandon)</a></li>
+					<li><a
+						href="/valence/jsp/recherche/formation/recherchelisteformationsanneespyramide.jsp">Liste
+							formations par Exercice </a></li>
+					<li><a
+						href="/valence/jsp/recherche/formation/recherchelisteformationsanneecivile.jsp">Liste
+							formations par années Civiles</a></li>
+					<li><a
+						href="/valence/jsp/recherche/formation/rechercheautrestatformation.jsp">Filtre
+							par formation</a></li>
+					<li><a
+						href="/valence/jsp/recherche/formation/rechercheautrestatformationannee.jsp">Filtre
+							par année</a></li>
+					<li><a href="#">Statistiques</a>
+						<ul class="niv3">
+
+							<li><a
+								href="/valence/jsp/recherche/formation/recherchelisteformationsanneecivile.jsp">Stagiaires
+									par année civile</a></li>
+
+							<li><a
+								href="/valence/jsp/recherche/formation/recherchelisteformationsanneespyramide.jsp">Stagiaires
+									par Exercice</a></li>
+							<li><a
+								href="/valence/jsp/suiviFormations/statSuiviFormation.jsp">
+									Par suivi formations</a></li>
+
+							<li><a
+								href="/valence/jsp/recherche/formation/rechechestatpourcent.jsp">%
+									par exercice</a></li>
+
+							<li><a
+								href="/valence/jsp/recherche/formation/rechechestatpourcentcivil.jsp">%
+									par année civile</a></li>
+
+
+
+						</ul>
+				</ul></li>
+
+			<li><a href="#">Formation </a>
+
+				<ul>
+					<li><a
+						href="/valence/jsp/formationpro/rechercherPersonneFormationPro.jsp">Inscription</a>
+
+					</li>
+					<li><a
+						href="/valence/jsp/formationpro/listingTousEmployeurs.jsp">Listing
+							Employeurs</a></li>
+					<li><a href="/valence/jsp/formationpro/nouvelleformation.jsp">Nouvelle
+							Formation</a></li>
+
+
+					<li><a
+						href="/valence/jsp/recherche/formationpro/listeInscritsparFormationDate.jsp">Inscrits/formation</a>
+
+					</li>
+
+					<li><a
+						href="/valence/jsp/recherche/formationpro/listeInscritsParEmployeur.jsp">Inscrits/Employeur</a>
+
+					</li>
+					<li><a
+						href="/valence/jsp/recherche/formationpro/recherchestatformationproannee.jsp">
+
+							Statistiques </a></li>
+
+
+				</ul></li>
+
+			<li><a href="#">Employeur</a>
+
+				<ul>
+
+					<li><a href="/valence/jsp/employeurs/rechercherEmployeur.jsp">Rechercher</a>
+
+					</li>
+
+					<li><a
+						href="/valence/jsp/employeurs/rechercherStructureEmp.jsp">Recherche/Structure</a>
+
+					</li>
+					<li><a href="/valence/jsp/employeurs/rechercherDomaineEmp.jsp">Recherche/Domaine</a>
+					<li><a
+						href="/valence/jsp/employeurs/listeemployeursactifs.jsp">Actifs</a>
+				</ul></li>
+
+
+			<li><a href="#">Offres</a>
+
+				<ul>
+
+					<li><a href="/valence/jsp/employeurs/offres/creation.jsp">Nouvelle
+							Offre</a></li>
+					<li><a href="/valence/jsp/employeurs/offres/nonpourvues.jsp">Consulter</a>
+					</li>
+					<li><a href="/valence/jsp/employeurs/offres/statistiques.jsp">Statistiques</a>
+				</ul></li>
+
+
+
+			<li><a href="#">SAP</a>
+				<ul class="niv3">
+					<li><a href="/valence/jsp/sap/stats/listingsalaries.jsp">Liste
+							Salariés </a></li>
+					<li><a href="/valence/jsp/sap/stats/listingemployeurs.jsp">Liste
+							Employeurs </a></li>
+					<li><a href="/valence/jsp/sap/stats/rechercheprestations.jsp">Fin
+							prestations par Période </a></li>
+
+					<li><a
+						href="/valence/jsp/sap/stats/rechercheprestationssansretour.jsp">Fin
+							prestation sans retour</a></li>
+
+					<li><a href="/valence/jsp/sap/encours/selectionmois.jsp">Relevés
+							Heures</a></li>
+
+					<li><a
+						href="/valence/jsp/sap/visitemedicale/listingpardates.jsp">Visites
+							Médicales </a></li>
+				</ul></li>
+
+			<li><a href="#">AI</a>
+				<ul>
+
+					<li><a href="/valence/jsp/ai/recherche/rechercheavance.jsp">Recherche
+							Avancée</a></li>
+					<li><a href="/valence/jsp/ai/recherche/parsuivi.jsp">Recherche
+							par Suivi</a></li>
+					<li><a href="/valence/jsp/ai/listes/pardates.jsp">Liste
+							contrat par date fin</a></li>
+					<li><a href="/valence/jsp/ai/listes/parfourchettedates.jsp">Liste
+							contrat dans fourchette</a></li>
+					<li><a href="/valence/jsp/ai/listes/contratsPeriodes.jsp">Salariés
+							en contrat sur période</a></li>
+					<li><a href="/valence/jsp/ai/agrement/recherchemoisannee.jsp">Agréments</a>
+
+					</li>
+					<li><a href="/valence/jsp/ai/permanents/selectionmois.jsp">H.
+							Permanents</a></li>
+					<li><a
+						href="/valence/jsp/ai/visitemedicale/listingpardates.jsp">Echéances
+							visites médicales</a></li>
+
+					<li><a href="/valence/jsp/ai/dmo/selectionmois.jsp">DMO</a></li>
+					<li><a href="/valence/jsp/ai/listes/listeExtranet.jsp">Liste
+							Extranet</a></li>
+					<!-- 		
+					<li><a href="/valence/jsp/mutuelle/fichesAcompleter.jsp">Fiches
+							Mutuelles Incomplètes</a></li>
+							-->
+					<li><a href="/valence/jsp/ai/recherche/echeancemutuelleIgnoreDateContrats.jsp">Echéances
+							Mutuelle</a></li>
+					<li><a href="#">Statistiques</a>
+
+						<ul class="niv3">
+							<li><a href="/valence/jsp/ai/statistiques/contratseul.jsp">Contrats
+									seul</a></li>
+							<li><a
+								href="/valence/jsp/ai/statistiques/contratparavenant.jsp">Contrats/Avenant</a>
+							</li>
+
+							<li><a href="/valence/jsp/ai/statistiques/contratmois.jsp">Contrats/Mois</a>
+							</li>
+
+
+						</ul></li>
+
+
+
+				</ul></li>
+
+			<!-- 
+
+		<li><a href="#">CAE</a>
+
+			<ul>
+
+				<li><a href="/valence/jsp/employeurs/offres/creation.jsp">Nouvelle
+						Offre</a></li>
+				<li><a href="/valence/jsp/employeurs/offres/nonpourvues.jsp">Consulter</a>
+				</li>
+				<li><a href="/valence/jsp/employeurs/offres/statistiques.jsp">Statistiques</a>
+			</ul></li>
+
+		-->
+
+			<li><a href="#">RSA</a>
+
+				<ul>
+
+					<li><a href="#">Liste Contrats</a>
+						<ul>
+							<li><a href="/valence/jsp/rmi_rsa/stats/fincontrat.jsp">Fin
+									Contrat</a></li>
+							<li><a href="/valence/jsp/rmi_rsa/stats/debutcontrat.jsp">Début
+									Contrat</a></li>
+							<li><a href="/valence/jsp/rmi_rsa/stats/contratencours.jsp">En
+									cours</a></li>
+						</ul></li>
+				</ul></li>
+
+
+
+
+			<li><a href="/valence/jsp/administration/passe.jsp">Administration</a>
+			</li>
+
+
+
+
+			<!-- 
+		<li><a href="#">Statistiques</a>
+
+			<ul>
+
+				<li><a href="#">Accueil</a>
+
+					<ul class="niv3">
+
+						<li><a
+							href="/valence/jsp/recherche/accueil/rechercheIdentitepourcent.jsp">
+
+								%</a></li>
+
+						<li><a
+							href="/valence/jsp/recherche/accueil/rechercheIdentite.jsp">
+
+								critères</a></li>
+
+					</ul></li>
+
+				<li><a href="#">Pyramide</a>
+
+					<ul class="niv3">
+
+						<li><a
+							href="/valence/jsp/recherche/formation/recherchelisteformationsanneecivile.jsp">Stagiaires
+								par année civile</a></li>
+
+						<li><a
+							href="/valence/jsp/recherche/formation/recherchelisteformationsanneespyramide.jsp">Stagiaires
+								par exercice</a></li>
+
+						<li><a
+							href="/valence/jsp/recherche/formation/rechechestatpourcent.jsp">%
+								par exercice</a></li>
+
+						<li><a
+							href="/valence/jsp/recherche/formation/rechechestatpourcentcivil.jsp">%
+								par année civile</a></li>
+
+					</ul></li>
+
+				<li><a href="#">Formation PRO</a>
+					<ul class="niv3">
+
+
+
+						<li><a
+							href="/valence/jsp/recherche/formationpro/recherchestatformationproannee.jsp">
+
+								%</a></li>
+
+
+					</ul></li>
+
+
+
+
+
+			</ul>
+			
+			
+			-->
+		</ul>
+
+	</div>
+</body>
+
+</html>

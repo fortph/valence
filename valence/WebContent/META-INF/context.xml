@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource name="jdbc/valence"
+auth="Container"
+type="javax.sql.DataSource"
+factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+username="root"
+password="elodie"
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/valence"
+timeBetweenEvictionRunsMillis="-1"
+initialSize="30"
+minIdle="100"
+maxActive="200"
+maxIdle="100"
+testWhileIdle="true"
+testOnBorrow="true"
+testOnReturn="true"
+validationQuery="select 1"
+removeAbandoned="true"
+removeAbandonedTimeout="120"
+validationInterval="30000"
+
+/>
+</Context>

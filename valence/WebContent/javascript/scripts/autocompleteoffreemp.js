@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#nomarechercher").autocomplete({source:function(req,reponse){$.ajax({url:"/valence/jsp/accueil/listeauto.jsp",data:{term:req.term},cache:false,dataType:"json",success:function(data,type){reponse($.map(data,function(objet){return objet.name+" ("+objet.id+")";}));}});},minLength:3,select:function(event,ui){return ui.name+" ("+ui.id+")";}});});

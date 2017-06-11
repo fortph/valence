@@ -1,0 +1,1 @@
+function cache3(){if($.contains(document.body,document.getElementById("oui"))){$(".cacherrefus").hide();$(".cacher").show();}else{$(".cacherrefus").show();$(".cacher").hide();}}

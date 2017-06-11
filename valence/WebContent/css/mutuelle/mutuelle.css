@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";*{margin:0;padding:0;}#body{font-size:95%;width:1024px;margin:0 120px;border:thin solid black;float:left;position:static;background:none repeat scroll 0 0 #C9FFFF;padding:10px;}
+#creation{background-color:#F5D787;text-align:center;}.boutons{text-align:center;}.affiche{border:thin solid black;background-color:white;text-align:left;}
+h3{color:blue;font-weight:normal;}h3:first-letter{color:red;font-weight:bold;text-decoration:underline;}
+.table1 {width:90%;margin:2px;margin-left:2%;}
+#refus{width:95%;margin:2px;margin-left:5%;}
+#droite{margin-left:80%;width:15%;min-width:15%;background-color:blue;color:red;font-weight:bold;border-radius:6px;}
+#decalage{margin-left:2%;text-decoration:underline;}
+td .centrer{text-align:center;}
+.decal{background:white;}
+.un{width:22%;margin-left:2%;}

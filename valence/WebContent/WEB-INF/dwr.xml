@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+	<allow>
+	
+	<!-- partie inscription -->
+		<create creator="new" javascript="NiveauFormation" >
+			<param name="class" value="beans.parametres.accueil.NiveauFormationDAO" />
+		</create>
+		<create creator="new" javascript="SituationFamiliale" >
+			<param name="class" value="beans.parametres.accueil.SituationFamilialeDAO" />
+		</create>
+
+		<create creator="new" javascript="CodesPostaux">
+			<param name="class" value="beans.parametres.accueil.CodesPostauxDAO" />
+		</create>
+		<create creator="new" javascript="Origine">
+			<param name="class" value="beans.parametres.accueil.OrigineDAO" />
+		</create>
+		<create creator="new" javascript="Sexe" >
+			<param name="class" value="beans.parametres.accueil.SexeDAO" />
+		</create>
+		<create creator="new" javascript="Nationalite">
+			<param name="class" value="beans.parametres.accueil.NationaliteDAO" />
+		</create>
+		<create creator="new" javascript="Rome">
+			<param name="class" value="beans.parametres.accueil.RomeDAO" />
+		</create>
+		<create creator="new" javascript="Priorites">
+			<param name="class" value="beans.parametres.accueil.PrioritesDAO" />
+		</create>
+		<create creator="new" javascript="Identite">
+			<param name="class" value="dao.imp.identite.IdentiteDAO" />
+		</create>
+		
+	<!-- Partie formation -->	
+		<create creator="new" javascript="OrganismeFormationDAO" >
+			<param name="class" value="dao.imp.formation.OrganismeFormationDAO" />
+		</create>
+		<create creator="new" javascript="NiveauQualificationFormationDAO" >
+			<param name="class" value="dao.imp.formation.NiveauQualificationFormationDAO" />
+		</create>
+		<create creator="new" javascript="AnimatriceDAO" >
+			<param name="class" value="dao.imp.formation.AnimatriceDAO" />
+		</create>
+		<create creator="new" javascript="PrescripteurDAO" >
+			<param name="class" value="dao.imp.formation.PrescripteurDAO" />
+		</create>
+		<create creator="new" javascript="ListeFormationsDAO" >
+			<param name="class" value="dao.imp.formation.ListeFormationsDAO" />
+		</create>
+		<create creator="new" javascript="ThemeFormationDAO" >
+			<param name="class" value="beans.parametres.formation.ThemeFormationDAO" />
+		</create>
+	
+	
+	<!-- Partie formation professionnellle -->	
+		<create creator="new" javascript="FormprofinancementDAO" >
+			<param name="class" value="beans.parametres.formationpro.FormprofinancementDAO" />
+		</create>
+		<create creator="new" javascript="FormproniveauDAO" >
+			<param name="class" value="beans.parametres.formationpro.FormproniveauDAO" />
+		</create>	
+		<create creator="new" javascript="FormprostatutemployeurDAO" >
+			<param name="class" value="beans.parametres.formationpro.FormprostatutemployeurDAO" />
+		</create>	
+		<create creator="new" javascript="FormprothemeDAO" >
+			<param name="class" value="beans.parametres.formationpro.FormprothemeDAO" />
+		</create>		
+		<create creator="new" javascript="FormationProEmployeurDAO" >
+			<param name="class" value="dao.imp.formationpro.FormationProEmployeurDAO" />
+		</create>
+			
+			
+		<!--                 Partie Employeurs                     -->	
+			
+		<create creator="new" javascript="Employeur" >
+			<param name="class" value="dao.imp.employeur.EmployeurDAO" />
+		</create>
+		<create creator="new" javascript="Contact" >
+			<param name="class" value="dao.imp.employeur.ContactDAO" />
+		</create>
+		<create creator="new" javascript="Service" >
+			<param name="class" value="dao.imp.employeur.ServiceDAO" />
+		</create>
+		<!-- Activite ou domaine professionnel -->
+		<create creator="new" javascript="Activite" >
+			<param name="class" value="beans.parametres.employeur.ActiviteDAO" />
+		</create>
+		<create creator="new" javascript="Statut" >
+			<param name="class" value="beans.parametres.employeur.StatutDAO" />
+		</create>
+		<create creator="new" javascript="Structure" >
+			<param name="class" value="beans.parametres.employeur.StructureDAO" />
+		</create>
+		
+		<create creator="new" javascript="Utilisateur" >
+			<param name="class" value="beans.parametres.capemploi.UtilisateurDAO" />
+		</create>
+		
+		<create creator="new" javascript="Civilite" >
+			<param name="class" value="beans.parametres.accueil.CiviliteDAO" />
+		</create>
+		<!-- ************************************************************ -->
+		<!--                   partie sap                                  -->
+		
+		<create creator="new" javascript="TachesSAP" >
+			<param name="class" value="dao.imp.sap.TachesSAPDAO" />
+		</create>
+		
+		<create creator="new" javascript="ContratCDI" >
+			<param name="class" value="dao.imp.sap.ContratCDIDAO" />
+		</create>
+		
+		<create creator="new" javascript="AvenantCDI" >
+			<param name="class" value="dao.imp.sap.AvenantCDIDAO" />
+		</create>
+		
+		
+		<!-- ************************************************************ -->
+	<!--	<convert converter="bean" match="beans.parametres.accueil.ReferentPoleEmploi" /> -->
+		<convert converter="bean" match="beans.formation.*" />
+		<convert converter="bean" match="beans.parametres.capemploi.*" />
+		<convert converter="bean" match="beans.sap.ContratCDI" />
+		<convert converter="bean" match="beans.sap.AvenantCDI" />
+		<convert converter="bean" match="beans.identite.Identite" />
+		<convert converter="bean" match="beans.parametres.accueil.Organisme" />
+	</allow>
+</dwr>
